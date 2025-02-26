@@ -22,6 +22,12 @@ cd /app
 # Create a virtual environment
 python3 -m venv /app/venv
 
+# Activate the virtual environment
+source /app/venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
 # create a service for the app via systemctl and start the app
 mv /app/todoapp.service /etc/systemd/system/
 systemctl daemon-reload
