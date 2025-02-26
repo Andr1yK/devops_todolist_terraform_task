@@ -9,14 +9,8 @@ defaultsg = {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  http = {
-    from_port   = 80
-    to_port     = 8080
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  https = {
-    from_port   = 443
+  app_http = {  # Allow traffic on port 8080 where the Django app runs
+    from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
