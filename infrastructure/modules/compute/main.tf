@@ -60,7 +60,7 @@ resource "aws_instance" "instance" {
     host        = aws_network_interface.network_interface.private_ip
   }
 
-  user_data = file("${path.module}/../../install-app.sh")
+  user_data = file("${path.module}/install-app.sh")
 
   tags = {
     Name = var.vm_name
