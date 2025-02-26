@@ -16,6 +16,9 @@ mkdir /app
 git clone https://github.com/Andr1yk/devops_todolist_terraform_task.git
 cp -r devops_todolist_terraform_task/app/* /app
 
+chown -R ubuntu:ubuntu /app
+chmod -R 755 /app
+
 # Navigate to the /app directory
 cd /app
 

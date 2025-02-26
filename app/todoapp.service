@@ -1,11 +1,14 @@
 [Unit]
 Description=todoapp service
+After=network.target
 
 [Service]
 WorkingDirectory=/app
-ExecStart=/app/start.sh
-StandardOutput=syslog
-StandardError=syslog
+ExecStart=/bin/bash -c 'source /app/venv/bin/activate && /app/start.sh'
+User=ubuntu
+Environment="PATH=/app/venv/bin:$PATH"
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=multi-user.target

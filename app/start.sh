@@ -1,8 +1,5 @@
 #! /bin/bash
 
-# Activate the virtual environment
-source /app/venv/bin/activate
-
 # Install dependencies (if they were not already installed during user_data)
 pip install -r requirements.txt
 
