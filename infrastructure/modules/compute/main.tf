@@ -66,3 +66,7 @@ resource "aws_instance" "instance" {
     Name = var.vm_name
   }
 }
+
+resource "aws_eip" "eip" {
+  network_interface = aws_network_interface.network_interface.id
+}
